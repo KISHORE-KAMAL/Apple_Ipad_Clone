@@ -1,0 +1,744 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+html,body
+{
+    width: 100%;
+}
+
+
+nav
+{
+    /* border: 1px solid red; */
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+nav ul
+{
+    /* border: 1px solid green; */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    /* width: 60%; */
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.731);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+nav a i
+{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.731);
+    font-size: 18px;
+    padding: 0px 20px;
+}
+nav ul li a:hover, nav a i:hover
+{
+    color: rgba(255, 255, 255, 0.918);
+    /* transition: 0.4s; */
+}
+nav .nav-icons
+{
+    /* border: 1px solid blue; */
+    margin-left: 40px;
+}
+nav .apple-icon
+{
+    /* margin-left: 154px; */
+    margin-right: 40px;
+}
+label #btn, label #cancel
+{
+    color: rgba(255, 255, 255, 0.731);
+    font-size: 20px;
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+    cursor: pointer;
+    display: none;
+}
+#check
+{
+    display: none;
+}
+@media only screen and (max-width: 840px)
+{
+    label #btn
+    {
+        display: block;
+    }
+
+    nav ul
+    {
+        position: fixed;
+        width: 840px;
+        height: 100vh;
+        background-color: black;
+        top: 40px;
+        left: -320%;
+        z-index: 222;
+    }
+    nav ul
+    {
+        display: block;
+        padding: 44px 40px;
+        line-height: 40px;
+    }
+    nav ul li a
+    {
+        font-size: 30px;
+    }
+    nav a i
+    {
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+    nav .apple-icon
+    {
+        font-size: 20px;
+        /* margin-left: -240px; */
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+    }
+    nav .nav-icons
+    {
+        position: absolute;
+        bottom: 10px;
+        right: 80px;
+    }
+    #check:checked ~ ul
+    {
+        left: 0px;
+    }
+    #check:checked ~ label #btn
+    {
+        display: none;
+    }
+    #check:checked ~ label #cancel
+    {
+        display: block;
+    }
+}
+@media only screen and (min-width: 840px)
+{
+    nav ul
+    {
+        width: 60%;
+    }
+}
+
+
+
+.ipad-icons
+{
+    /* border: 1px solid red; */
+    background-color: black;
+    height: 134px;
+}
+.ipad-icons ul
+{
+    /* border: 1px solid green; */
+    width: 64%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ipad-icons ul li
+{
+    /* border: 1px solid yellow; */
+    height: 100px;
+    padding: 20px 4px;
+    text-align: center;
+}
+.ipad-icons ul li a
+{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    color: #f5f5f7f1;
+}
+.ipad-icons ul li a:hover
+{
+    color: #2997ff;
+}
+.ipad-icons ul li a span
+{
+    color: #f56300;
+    font-size: 11px;
+}
+.ipad-icons ul li .ipad-icon1
+{
+    height: 54px;
+    width: 41px;
+}
+.ipad-icons ul li .ipad-icon2
+{
+    height: 54px;
+    width: 30px;
+}
+.ipad-icons ul li .ipad-icon3
+{
+    height: 54px;
+    width: 50px;
+}
+.ipad-icons ul li .ipad-icon4
+{
+    height: 54px;
+    width: 23px;
+}
+.ipad-icons ul li .ipad-icon5
+{
+    height: 54px;
+    width: 45px;
+}
+.ipad-icons ul li .ipad-icon6
+{
+    height: 54px;
+    width: 3px;
+}
+.ipad-icons ul li .ipad-icon7
+{
+    height: 54px;
+    width: 63px;
+}
+.ipad-icons ul li .ipad-icon8
+{
+    height: 54px;
+    width: 31px;
+}
+.ipad-icons ul li .ipad-icon9
+{
+    height: 54px;
+    width: 32px;
+}
+.ipad-icons ul li .ipad-icon10
+{
+    height: 54px;
+    width: 66px;
+}
+.ipad-icons ul .right-arr
+{
+    color: white;
+    border-left: 1px solid rgba(255, 255, 255, 0.475);
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+    padding: 0px 10px;
+    padding-top: 40px;
+    font-size: 24px;
+    display: none;
+    z-index: 0;
+}
+@media only screen and (max-width: 840px)
+{
+    .m-disp-none
+    {
+        display: none;
+    }
+    .ipad-icons ul
+    {
+        width: 90%;
+    }
+    .ipad-icons ul .right-arr
+    {
+        display: block;
+    }
+}
+
+
+
+.first-banner
+{
+    /* border: 1px solid red; */
+    background-color: black;
+    height: 740px;
+    display: flex;
+}
+.first-banner .first-banner-img1
+{
+    /* border: 1px solid yellow; */
+    background-image: url("https://www.apple.com/in/ipad/home/images/overview/hero/fcp_ipad_hero__e663fdl2htea_medium_2x.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 735px;
+    height: 569px;
+    background-size: 735px 569px;
+    flex-shrink: 2;
+    margin-top: 100px;
+}
+.first-banner .first-banner-img2
+{
+    /* border: 1px solid yellow; */
+    width: 440px;
+    background-image: url("https://www.apple.com/in/ipad/home/images/overview/hero/lp_ipad_hero__ec9vtoqzs0a6_medium_2x.png");
+    background-repeat: no-repeat;
+    width: 735px;
+    height: 569px;
+    background-size: 735px 569px;
+    flex-shrink: 2;
+    margin-top: 100px;
+}
+.first-banner .first-banner-content
+{
+    text-align: center;
+    /* border: 1px solid green; */
+    width: 700px;
+    margin: 0px 40px;
+    margin-top: 100px;
+}
+.first-banner .first-banner-content h3
+{
+    /* border: 1px solid red; */
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 600;
+    letter-spacing: .009em;
+    color: #f5f5f7;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.first-banner .first-banner-content h2
+{
+    /* border: 1px solid red; */
+    font-size: 56px;
+    line-height: 1.07143;
+    font-weight: 600;
+    letter-spacing: -.005em;
+    color: #f5f5f7;
+    margin-bottom: 44px;
+}
+.first-banner .first-banner-content a
+{
+    color: #2997ff;
+    line-height: 24px;
+}
+.first-banner .first-banner-content a:hover
+{
+    text-decoration: underline;
+}
+.first-banner .first-banner-content .mt
+{
+    /* border: 1px solid red; */
+    position: relative;
+    top: 10px;
+}
+@media only screen and (max-width: 710px)
+{
+    .first-banner
+    {
+        height: 700px;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+    }
+    .first-banner .first-banner-content h3
+    {
+        font-size: 26px;
+    }
+    .first-banner .first-banner-content h2
+    {
+        font-size: 44px;
+    }
+    .first-banner .first-banner-content a
+    {
+        font-size: 17px;
+    }
+    .first-banner .first-banner-content
+    {
+        margin-top: -20px;
+        order: -1;
+    }
+    .first-banner .first-banner-img1
+    {
+        background-size: 265px 199px;
+        flex-basis: 48%;
+        flex-shrink: 2;
+        position: relative;
+        top: -44px;
+        /* right: 10px; */
+        margin-top: -100px;
+    }
+    .first-banner .first-banner-img2
+    {
+        background-size: 265px 199px;
+        flex-basis: 48%;
+        flex-shrink: 2;
+        position: relative;
+        top: 140px;
+        /* left: 10px; */
+        margin-top: -100px;
+    }
+}
+@media only screen and (max-width: 400px)
+{
+    .first-banner .first-banner-content h3
+    {
+        font-size: 24px;
+    }
+    .first-banner .first-banner-content h2
+    {
+        font-size: 40px;
+    }
+    .first-banner .first-banner-content a
+    {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 500px)
+{
+    .first-banner
+    {
+        gap: 10px;
+    }
+    .first-banner .first-banner-img1
+    {
+        flex-basis: 48%;
+    }
+    .first-banner .first-banner-img2
+    {
+        flex-basis: 48%;
+    }
+}
+@media only screen and (max-width: 345px)
+{
+    .first-banner .first-banner-content h2
+    {
+        font-size: 34px;
+    }
+}
+
+
+
+.second-banner
+{
+    /* border: 1px solid red; */
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+.second-banner .second-banner-content
+{
+    /* border: 1px solid red; */
+    text-align: center;
+    width: 360px;
+    margin-top: 344px;
+    /* display: none; */
+    flex-basis: 23.33333%;
+    max-width: 23.33333%;
+    position: relative;
+    left: 100px;
+    z-index: 2;
+    /* flex-grow: 2; */
+}
+.second-banner .second-banner-content span
+{
+    color: #f56300;
+    font-size: 12px;
+}
+.second-banner .second-banner-content h2
+{
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -.003em;
+    margin-top: 10px;
+}
+.second-banner .second-banner-content .second-banner-smallflex
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.second-banner .second-banner-content .second-banner-smallflex p
+{
+    font-size: 21px;
+    line-height: 1.19048;
+    font-weight: 600;
+    letter-spacing: .011em;
+}
+.second-banner .second-banner-content .second-banner-smallflex img
+{
+    width: 52px;
+    height: 53px;
+}
+.second-banner .second-banner-content p
+{
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    margin-bottom: 14px;
+}
+.second-banner .second-banner-content a
+{
+    font-size: 17px;
+    line-height: 2.5;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    color: white;
+}
+.second-banner .second-banner-content .buy-btn
+{
+    /* border: 1px solid red; */
+    padding: 10px 20px;
+    border-radius: 30px ;
+    background-color: #0071e3;
+}
+.second-banner .second-banner-content .hover-underline
+{
+    color: #2997ff;
+}
+.second-banner .second-banner-content .hover-underline:hover
+{
+    text-decoration: underline;
+}
+.second-banner .second-banner-img
+{
+    /* border: 1px solid red; */
+    background-image: url("https://www.apple.com/in/ipad/home/images/overview/hero/ipad_pro_hero__bh3eq6sqfjw2_medium_2x.jpg");
+    /* width: 1100px; */
+    /* width: 100%; */
+    height: 800px;
+    background-size: 1100px 900px;
+    background-repeat: no-repeat;
+    background-position: right;
+    flex-basis: 76.66667%;
+    max-width: 76.66667%;
+    margin-top: 100px;
+    opacity: 0.9;
+    flex-shrink: 4;
+}
+@media only screen and (max-width: 1240px)
+{
+    .second-banner .second-banner-img
+    {
+        background-position: center center;
+    }
+}
+@media only screen and (max-width: 1120px)
+{
+    .second-banner .second-banner-img
+    {
+        background-size: 700px 500px;
+        height: 400px;
+        flex-basis: 66.66667%;
+        max-width: 66.66667%;
+        flex-shrink: 2;
+    }
+    .second-banner .second-banner-content
+    {
+        position: relative;
+        top: -140px;
+        flex-grow: 4;
+    }
+}
+@media only screen and (max-width: 980px)
+{
+    .second-banner .second-banner-img
+    {
+        background-size: 630px 430px;
+        flex-basis: 100%;
+        max-width: 100%;
+        /* flex-shrink: 2; */
+    }
+    .second-banner .second-banner-content
+    {
+        position: relative;
+        top: -160px;
+        left: -10px;
+        flex-basis: 46.66667%;
+        max-width: 98%;
+    }
+}
+@media only screen and (max-width: 760px)
+{
+    .second-banner
+    {
+        display: flex;
+        flex-wrap: wrap;
+        height: 800px;
+    }
+    .second-banner .second-banner-img
+    {
+        position: relative;
+        top: -320px;
+    }
+    .second-banner .second-banner-content
+    {
+        position: relative;
+        top: -200px;
+        width: 1000px;
+    }
+}
+
+
+.third-banner
+{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: end;
+}
+.third-banner .third-banner-content
+{
+    /* border: 1px solid red; */
+    text-align: center;
+    height: 340px;
+    /* display: none; */
+    flex-basis: 26.33333%;
+    max-width: 26.33333%;
+    position: relative;
+    right: 280px;
+    top: 140px;
+    z-index: 2;
+    margin-top: 100px;
+}
+.third-banner .third-banner-content span
+{
+    color: #f56300;
+    font-size: 12px;
+}
+.third-banner .third-banner-content h2
+{
+    font-size: 52px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -.003em;
+    margin-top: 10px;
+}
+.third-banner .third-banner-content .txt-sz
+{
+    font-size: 24px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    margin-bottom: 14px;
+    color: black;
+}
+.third-banner .third-banner-content p
+{
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    color: rgba(0, 0, 0, 0.665);
+    margin-bottom: 14px;
+}
+.third-banner .third-banner-content a
+{
+    font-size: 17px;
+    line-height: 2.5;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    color: white;
+}
+.third-banner .third-banner-content .buy-btn
+{
+    /* border: 1px solid red; */
+    padding: 10px 20px;
+    border-radius: 30px ;
+    background-color: #075eb6;
+}
+.third-banner .third-banner-content .hover-underline
+{
+    color: #2997ff;
+}
+.third-banner .third-banner-content .hover-underline:hover
+{
+    text-decoration: underline;
+}
+.third-banner .third-banner-img
+{
+    /* border: 1px solid red; */
+    background-image: url("https://www.apple.com/v/ipad/home/cf/images/overview/hero/ipad_hero__d0tgmaq6shm6_medium_2x.jpg");
+    width: 622px;
+    height: 683px;
+    background-size: 622px 683px;
+    background-repeat: no-repeat;
+    flex-basis: 50%;
+    max-width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+@media only screen and (max-width: 1180px)
+{
+    .third-banner .third-banner-img
+    {
+        flex-basis: 60%;
+        max-width: 60%;
+    }
+}
+@media only screen and (max-width: 1080px)
+{
+    .third-banner
+    {
+        height: 440px;
+        /* border: 1px solid red; */
+    }
+    .third-banner .third-banner-img
+    {
+        background-size: 322px 383px;
+    }
+    .third-banner .third-banner-content
+    {
+        position: relative;
+        top: 0px;
+        left: -80px;
+        /* left: 0px; */
+    }
+}
+@media only screen and (max-width: 750px)
+{
+    .third-banner
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 780px;
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* border: 1px solid red; */
+    }
+    .third-banner .third-banner-img
+    {
+        flex-basis: 100%;
+        max-width: 100%;
+        height: 500px;
+        /* border: 1px solid red; */
+        background-position: center center;
+        order: 1;
+        margin-top: -20px;
+    }
+    .third-banner .third-banner-content
+    {
+        flex-basis: 100%;
+        max-width: 100%;
+        /* border: 1px solid red; */
+        height: 290px;
+        position: relative;
+        left: 0px;
+        margin-top: 54px;
+    }
+}
